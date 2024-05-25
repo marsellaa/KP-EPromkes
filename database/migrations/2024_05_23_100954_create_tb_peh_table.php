@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('spesialisasi');
             $table->string('unit_kerja');
             $table->string('tema');
-            $table->char('status', 1); 
+            $table->enum('status', ['Y', 'T', 'P']);
             $table->string('host');
             $table->integer('jml_penonton');
             $table->timestamps();

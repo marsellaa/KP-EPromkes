@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tb_dokumentasi', function (Blueprint $table) {
+        Schema::create('tb_pertanyaan', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_file');
-            $table->enum('tipe_file', ['Gambar', 'Video', 'Dokumen']);
+            $table->text('pertanyaan');
             $table->timestamps();
         });
     }
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tb_dokumentasi');
+        Schema::dropIfExists('tb_pertanyaan');
     }
 };

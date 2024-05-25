@@ -23,7 +23,7 @@ return new class extends Migration
             $table->timestamps();
 
             // Menambahkan foreign key constraint
-            $table->foreign('role_id')->references('id')->on('tb_roles')->onDelete('restrict');
+            $table->foreign('role_id')->references('id')->on('tb_roles')->onDelete('cascade');
         });
     }
 
